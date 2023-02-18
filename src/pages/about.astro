@@ -1,120 +1,151 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import BaseLayout from "../layouts/BaseLayout.astro";
 
-import ContactCTA from '../components/ContactCTA.astro';
-import Hero from '../components/Hero.astro';
+const skills = [
+  "Nodejs",
+  "React",
+  "GraphQL",
+  "Relay",
+  "Sequelize",
+  "Jest",
+  "Postgres",
+  "Nextjs",
+  "Tailwind",
+];
 ---
 
-<BaseLayout title="About | Jeanine White" description="About Jeanine White Lorem Ipsum">
-	<div class="stack gap-20">
-		<main class="wrapper about">
-			<Hero
-				title="About"
-				tagline="Thanks for stopping by. Read below to learn more about myself and my background."
-			>
-				<img
-					width="1553"
-					height="873"
-					src="/assets/at-work.jpg"
-					alt="Jeanine White at work with a colleague"
-				/>
-			</Hero>
-
-			<section>
-				<h2 class="section-title">Background</h2>
-				<div class="content">
-					<p>
-						Lorem ipsum dolor sit amet, <a href="https://astro.build/">Astro</a> makes people happy.
-						Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Proin nibh nisl condimentum
-						id venenatis a condimentum vitae. Dapibus ultrices in iaculis nunc. Arcu odio ut sem nulla
-						pharetra diam sit amet. Diam quis enim lobortis scelerisque fermentum dui faucibus in ornare.
-					</p>
-					<p>
-						Arcu dui vivamus arcu felis bibendum ut tristique et egestas. Eget gravida cum sociis
-						natoque penatibus. Cras fermentum odio eu feugiat pretium nibh. Proin nibh nisl
-						condimentum id venenatis. Porta nibh venenatis cras sed felis eget velit. Id diam vel
-						quam elementum pulvinar etiam non.
-					</p>
-					<p>
-						Ultrices tincidunt arcu non sodales neque sodales ut. Sed enim ut sem viverra aliquet
-						eget sit amet. Lacus luctus accumsan tortor posuere ac ut consequat semper viverra.
-						Viverra accumsan in nisl nisi scelerisque eu ultrices. In massa tempor nec feugiat nisl
-						pretium fusce.
-					</p>
-				</div>
-			</section>
-			<section>
-				<h2 class="section-title">Education</h2>
-				<div class="content">
-					<p>Corporis voluptates tenetur laudantium.</p>
-				</div>
-			</section>
-			<section>
-				<h2 class="section-title">Skills</h2>
-				<div class="content">
-					<p>officia unde omnis</p>
-				</div>
-			</section>
-		</main>
-
-		<ContactCTA />
-	</div>
+<BaseLayout title="About | Gileade Kelvin" description="About Gileade Kelvin">
+  <main class="m-auto flex flex-col justify-center px-4 pb-24 md:max-w-[83rem]">
+    <header class="flex flex-col gap-2">
+      <h2>About</h2>
+      <p class="text-lg">My background and skills</p>
+    </header>
+    <div class="flex flex-col gap-4 py-8 md:max-w-[83rem]">
+      <section>
+        <h3 class="py-4">Background</h3>
+        <div class="flex flex-col pl-4">
+          <ol class="max-w-3xl border-l border-gray-300">
+            <li>
+              <div class="flex-start flex items-center pt-3">
+                <div class="-ml-1 mr-3 h-2 w-2 rounded-full bg-gray-300"></div>
+                <p class="text-sm text-gray-500">2014</p>
+              </div>
+              <div class="mt-0.5 ml-4 mb-6">
+                <h4 class="mb-1.5 text-xl font-semibold text-gray-800">
+                  Start of BSc Computer Science degree at UFCG
+                </h4>
+                <p class="mb-3 text-gray-500">
+                  This was the start of my developer journey.
+                </p>
+              </div>
+            </li>
+            <li>
+              <div class="flex-start flex items-center pt-2">
+                <div class="-ml-1 mr-3 h-2 w-2 rounded-full bg-gray-300"></div>
+                <p class="text-sm text-gray-500">2017</p>
+              </div>
+              <div class="mt-0.5 ml-4 mb-6">
+                <h4 class="mb-1.5 text-xl font-semibold text-gray-800">
+                  Joined Analytics Laboratory
+                </h4>
+                <p class="mb-3 text-gray-500">
+                  In this year I have joined the Analytics Laboratory at UFCG.
+                  My initial interest was to analyze government data in Brazil.
+                  I helped to develop:
+                  <ol
+                    class="list-disc space-y-3 pl-5 text-gray-600 marker:text-gray-500"
+                  >
+                    <li>
+                      <a
+                        class="text-gray-800 underline hover:text-gray-500"
+                        href="https://tadepemerenda.transparencia.org.br/home"
+                        >Tá de pe merenda</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="text-gray-800 underline hover:text-gray-500"
+                        href="https://comprasemergenciais.transparencia.org.br/home"
+                        >Tá de pe compras emergenciais</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="text-gray-800 underline hover:text-gray-500"
+                        href="https://analytics-ufcg.github.io/empenhados/"
+                        >Empenhados</a
+                      >
+                    </li>
+                  </ol>
+                </p>
+              </div>
+            </li>
+            <li>
+              <div class="flex-start flex items-center pt-2">
+                <div class="-ml-1 mr-3 h-2 w-2 rounded-full bg-gray-300"></div>
+                <p class="text-sm text-gray-500">2018</p>
+              </div>
+              <div class="mt-0.5 ml-4 pb-5">
+                <h4 class="mb-1.5 text-xl font-semibold text-gray-800">
+                  Finished my BSc Computer Science degree at UFCG
+                </h4>
+                <p class="mb-3 text-gray-500">
+                  This year I finished my BSc Computer Science degree at UFCG.
+                </p>
+              </div>
+            </li>
+            <li>
+              <div class="flex-start flex items-center pt-2">
+                <div class="-ml-1 mr-3 h-2 w-2 rounded-full bg-gray-300"></div>
+                <p class="text-sm text-gray-500">2019</p>
+              </div>
+              <div class="mt-0.5 ml-4 pb-5">
+                <h4 class="mb-1.5 text-xl font-semibold text-gray-800">
+                  Data Analyst at Analytics Laboratory
+                </h4>
+                <p class="mb-3 text-gray-500">
+                  I started as a Junior Data Analyst at Analytics Laboratory
+                </p>
+              </div>
+            </li>
+            <li>
+              <div class="flex-start flex items-center pt-2">
+                <div class="-ml-1 mr-3 h-2 w-2 rounded-full bg-gray-300"></div>
+                <p class="text-sm text-gray-500">2021</p>
+              </div>
+              <div class="mt-0.5 ml-4 pb-5">
+                <h4 class="mb-1.5 text-xl font-semibold text-gray-800">
+                  Software Engineer at Sigalei
+                </h4>
+                <p class="mb-3 text-gray-500">
+                  I started a Software Engineer job at Sigalei. More focused on
+                  software development. Here I found myself as a software
+                  developer that likes to build and fix things.
+                </p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+      <section>
+        <h3 class="py-4">Education</h3>
+        <div class="border-l-4 border-gray-300 pl-4">
+          <p class="">BSc Computer Science at UFCG - Brasil</p>
+          <p class="text-sm text-gray-500">2014-2018</p>
+        </div>
+      </section>
+      <section>
+        <h3 class="py-4">Skills</h3>
+        <div class="mt-2 flex flex-row gap-4">
+          {
+            skills.map((skill) => (
+              <p class="rounded-full border border-gray-200 px-4 py-3">
+                {skill}
+              </p>
+            ))
+          }
+        </div>
+      </section>
+    </div>
+  </main>
 </BaseLayout>
-
-<style>
-	.about {
-		display: flex;
-		flex-direction: column;
-		gap: 3.5rem;
-	}
-
-	img {
-		margin-top: 1.5rem;
-		border-radius: 1.5rem;
-		box-shadow: var(--shadow-md);
-	}
-
-	section {
-		display: flex;
-		flex-direction: column;
-		gap: 0.5rem;
-		color: var(--gray-200);
-	}
-
-	.section-title {
-		grid-column-start: 1;
-		font-size: var(--text-xl);
-		color: var(--gray-0);
-	}
-
-	.content {
-		grid-column: 2 / 4;
-	}
-
-	.content :global(a) {
-		text-decoration: 1px solid underline transparent;
-		text-underline-offset: 0.25em;
-		transition: text-decoration-color var(--theme-transition);
-	}
-
-	.content :global(a:hover),
-	.content :global(a:focus) {
-		text-decoration-color: currentColor;
-	}
-
-	@media (min-width: 50em) {
-		.about {
-			display: grid;
-			grid-template-columns: 1fr 60% 1fr;
-		}
-
-		.about > :global(:first-child) {
-			grid-column-start: 2;
-		}
-
-		section {
-			display: contents;
-			font-size: var(--text-lg);
-		}
-	}
-</style>
