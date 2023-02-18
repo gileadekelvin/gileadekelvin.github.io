@@ -14,107 +14,104 @@ const projects = (await getCollection("work")).sort(
   title="My Work | Gileade Kelvin"
   description="Learn about Gileade Kelvin's most recent projects"
 >
-  <div class="flex flex-col gap-20">
-    <main class="m-auto flex w-full max-w-[83rem] flex-col gap-8">
-      <div class="flex flex-col gap-4">
-        <h1>My Work</h1>
-        <p class="text-lg">
-          See my most recent projects below to get an idea of my past
-          experience.
-        </p>
-      </div>
-      <section class="w-full">
-        <div class="flex flex-col gap-4 py-12 pl-8">
-          <div class="flex flex-col border-l-4 border-gray-400 p-4">
-            <div>
-              <a href="/work/standup-daily"
-                ><h5 class="text-gray-800 hover:text-gray-500">
-                  Standup Daily
-                </h5></a
-              >
-              <p>An async remote stand-up meeting plataform</p>
-            </div>
-            <div class="flex flex-row gap-4 pt-2">
-              <a
-                href="https://github.com/gileadekelvin/standup-api"
-                class="flex flex-row text-gray-800 hover:text-gray-500"
-              >
-                <span class="pr-1">api</span>
-                <Icon icon="github-logo" size="24px" />
-              </a>
-              <a
-                href="https://github.com/gileadekelvin/standup-front"
-                class="flex flex-row text-gray-800 hover:text-gray-500"
-              >
-                <span class="pr-1">Next.js app</span>
-                <Icon icon="github-logo" size="24px" />
-              </a>
-              <a
-                href="https://standup-daily.vercel.app/"
-                class="flex flex-row text-gray-800 hover:text-gray-500"
-              >
-                <span class="pr-1">View</span>
-                <Icon icon="external" size="22px" />
-              </a>
-            </div>
+  <main class="m-auto flex max-w-[83rem] flex-col px-4 pb-24">
+    <header class="flex flex-col gap-4">
+      <h1>My Work</h1>
+      <p class="text-lg">
+        See my most recent projects below to get an idea of my past experience.
+      </p>
+    </header>
+    <div class="flex max-w-[83rem] flex-col gap-4 py-8">
+      <div class="flex flex-col gap-4 py-12 pl-8">
+        <div class="flex flex-col border-l-4 border-gray-400 p-4">
+          <div>
+            <a href="/work/standup-daily"
+              ><h5 class="text-gray-800 hover:text-gray-500">
+                Standup Daily
+              </h5></a
+            >
+            <p>An async remote stand-up meeting plataform</p>
           </div>
-          <div class="flex flex-col gap-1 border-l-4 border-gray-400 p-4">
-            <div>
-							<a href="/work/decode-base64"
-                ><h5 class="text-gray-800 hover:text-gray-500">
-                  Decode base64
-                </h5></a
-              >
-              <p>Decode and Encode base64 strings</p>
-            </div>
-            <div class="flex flex-row gap-4 pt-2">
-              <a
-                href="https://github.com/gileadekelvin/decode-base-64"
-                class="flex flex-row text-gray-800 hover:text-gray-500"
-              >
-                <span class="pr-1">source</span>
-                <Icon icon="github-logo" size="24px" />
-              </a>
-              <a
-                href="https://decode-base64.vercel.app/"
-                class="flex flex-row text-gray-800 hover:text-gray-500"
-              >
-                <span class="pr-1">View</span>
-                <Icon icon="external" size="24px" />
-              </a>
-            </div>
-          </div>
-          <div class="flex flex-col gap-1 border-l-4 border-gray-400 p-4">
-            <div>
-							<a href="/work/nome-do-bebe"
-                ><h5 class="text-gray-800 hover:text-gray-500">
-                  Nome do bebê
-                </h5></a
-              >
-              <p>
-                This project will help you to decide your next baby name! Nome
-                do bebê means baby's name in portuguese.
-              </p>
-            </div>
-            <div class="flex flex-row gap-4 pt-2">
-              <a
-                href="https://github.com/gileadekelvin/nome-de-bebe"
-                class="flex flex-row text-gray-800 hover:text-gray-500"
-              >
-                <span class="pr-1">source</span>
-                <Icon icon="github-logo" size="24px" />
-              </a>
-              <a
-                href="https://nome-do-bebe.vercel.app/"
-                class="flex flex-row text-gray-800 hover:text-gray-500"
-              >
-                <span class="pr-1">View</span>
-                <Icon icon="external" size="24px" />
-              </a>
-            </div>
+          <div class="flex flex-row gap-4 pt-2">
+            <a
+              href="https://github.com/gileadekelvin/standup-api"
+              class="flex flex-row text-gray-800 hover:text-gray-500"
+            >
+              <span class="pr-1">api</span>
+              <Icon icon="github-logo" size="24px" />
+            </a>
+            <a
+              href="https://github.com/gileadekelvin/standup-front"
+              class="flex flex-row text-gray-800 hover:text-gray-500"
+            >
+              <span class="pr-1">Next.js app</span>
+              <Icon icon="github-logo" size="24px" />
+            </a>
+            <a
+              href="https://standup-daily.vercel.app/"
+              class="flex flex-row text-gray-800 hover:text-gray-500"
+            >
+              <span class="pr-1">View</span>
+              <Icon icon="external" size="22px" />
+            </a>
           </div>
         </div>
-      </section>
-    </main>
-  </div>
+        <div class="flex flex-col gap-1 border-l-4 border-gray-400 p-4">
+          <div>
+            <a href="/work/decode-base64"
+              ><h5 class="text-gray-800 hover:text-gray-500">
+                Decode base64
+              </h5></a
+            >
+            <p>Decode and Encode base64 strings</p>
+          </div>
+          <div class="flex flex-row gap-4 pt-2">
+            <a
+              href="https://github.com/gileadekelvin/decode-base-64"
+              class="flex flex-row text-gray-800 hover:text-gray-500"
+            >
+              <span class="pr-1">source</span>
+              <Icon icon="github-logo" size="24px" />
+            </a>
+            <a
+              href="https://decode-base64.vercel.app/"
+              class="flex flex-row text-gray-800 hover:text-gray-500"
+            >
+              <span class="pr-1">View</span>
+              <Icon icon="external" size="24px" />
+            </a>
+          </div>
+        </div>
+        <div class="flex flex-col gap-1 border-l-4 border-gray-400 p-4">
+          <div>
+            <a href="/work/nome-do-bebe"
+              ><h5 class="text-gray-800 hover:text-gray-500">
+                Nome do bebê
+              </h5></a
+            >
+            <p>
+              This project will help you to decide your next baby name! Nome do
+              bebê means baby's name in portuguese.
+            </p>
+          </div>
+          <div class="flex flex-row gap-4 pt-2">
+            <a
+              href="https://github.com/gileadekelvin/nome-de-bebe"
+              class="flex flex-row text-gray-800 hover:text-gray-500"
+            >
+              <span class="pr-1">source</span>
+              <Icon icon="github-logo" size="24px" />
+            </a>
+            <a
+              href="https://nome-do-bebe.vercel.app/"
+              class="flex flex-row text-gray-800 hover:text-gray-500"
+            >
+              <span class="pr-1">View</span>
+              <Icon icon="external" size="24px" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
 </BaseLayout>
