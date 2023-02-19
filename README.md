@@ -4,4 +4,4 @@ This is my personal website built with Astro using the [Portfolio template](http
 
 My goal is to introduce myself to the community and to learn Astro!
 
-Checkout gileadekelvin.github.io
+Checkout [https://gileadekelvin.vercel.app/](https://gileadekelvin.vercel.app/)
