@@ -1,5 +1,5 @@
 ---
-title: Timelinging
+title: Timelining
 publishDate: 2023-01-03 00:00:00
 description: Bring your stories to life with easy-to-create timelines.
 tags:
