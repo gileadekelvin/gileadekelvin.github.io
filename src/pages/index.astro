@@ -7,6 +7,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 // Component Imports
 import Icon from "../components/Icon.astro";
 import Pill from "../components/Pill.astro";
+import Projects from "../components/Projects.astro";
 
 const projects = (await getCollection("work"))
   .sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf())
@@ -37,97 +38,6 @@ const projects = (await getCollection("work"))
       <h3>Recent projects</h3>
       <p>Take a look below at some of my recent projects</p>
     </div>
-    <section class="w-full">
-      <div class="flex flex-col gap-4 py-12 pl-8">
-        <div class="flex flex-col border-l-4 border-gray-400 p-4">
-          <div>
-            <a href="/work/standup-daily"
-              ><h5 class="text-gray-800 hover:text-gray-500">
-                Standup Daily
-              </h5></a
-            >
-            <p>An async remote stand-up meeting plataform</p>
-          </div>
-          <div class="flex flex-row gap-4 pt-2">
-            <a
-              href="https://github.com/gileadekelvin/standup-api"
-              class="flex flex-row text-gray-800 hover:text-gray-500"
-            >
-              <span class="pr-1">api</span>
-              <Icon icon="github-logo" size="24px" />
-            </a>
-            <a
-              href="https://github.com/gileadekelvin/standup-front"
-              class="flex flex-row text-gray-800 hover:text-gray-500"
-            >
-              <span class="pr-1">Next.js app</span>
-              <Icon icon="github-logo" size="24px" />
-            </a>
-            <a
-              href="https://standup-daily.vercel.app/"
-              class="flex flex-row text-gray-800 hover:text-gray-500"
-            >
-              <span class="pr-1">View</span>
-              <Icon icon="external" size="22px" />
-            </a>
-          </div>
-        </div>
-        <div class="flex flex-col gap-1 border-l-4 border-gray-400 p-4">
-          <div>
-            <a href="/work/decode-base64"
-              ><h5 class="text-gray-800 hover:text-gray-500">
-                Decode base64
-              </h5></a
-            >
-            <p>Decode and Encode base64 strings</p>
-          </div>
-          <div class="flex flex-row gap-4 pt-2">
-            <a
-              href="https://github.com/gileadekelvin/decode-base-64"
-              class="flex flex-row text-gray-800 hover:text-gray-500"
-            >
-              <span class="pr-1">source</span>
-              <Icon icon="github-logo" size="24px" />
-            </a>
-            <a
-              href="https://decode-base64.vercel.app/"
-              class="flex flex-row text-gray-800 hover:text-gray-500"
-            >
-              <span class="pr-1">View</span>
-              <Icon icon="external" size="24px" />
-            </a>
-          </div>
-        </div>
-        <div class="flex flex-col gap-1 border-l-4 border-gray-400 p-4">
-          <div>
-            <a href="/work/nome-do-bebe"
-              ><h5 class="text-gray-800 hover:text-gray-500">
-                Nome do bebê
-              </h5></a
-            >
-            <p>
-              This project will help you to decide your next baby name! Nome do
-              bebê means baby's name in portuguese.
-            </p>
-          </div>
-          <div class="flex flex-row gap-4 pt-2">
-            <a
-              href="https://github.com/gileadekelvin/nome-de-bebe"
-              class="flex flex-row text-gray-800 hover:text-gray-500"
-            >
-              <span class="pr-1">source</span>
-              <Icon icon="github-logo" size="24px" />
-            </a>
-            <a
-              href="https://nome-do-bebe.vercel.app/"
-              class="flex flex-row text-gray-800 hover:text-gray-500"
-            >
-              <span class="pr-1">View</span>
-              <Icon icon="external" size="24px" />
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
+    <Projects />
   </main>
 </BaseLayout>
