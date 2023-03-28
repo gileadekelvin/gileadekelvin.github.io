@@ -26,20 +26,20 @@ const { Content } = await entry.render();
 ---
 
 <BaseLayout title={entry.data.title} description={entry.data.description}>
-  <div class="flex flex-col gap-20 p-4 pb-24">
+  <div class="flex flex-col gap-20 p-4 pb-24 max-w-4xl mx-auto">
     <div class="gap-15 flex flex-col">
       <header class="border-b-1 border-gray-800 pb-10">
         <div class="m-auto flex w-full max-w-[83rem] flex-col gap-2">
           <a class="flex-none" href="/work/"><Icon icon="arrow-left" /> Work</a>
-          <div>
+          <div class="flex flex-col gap-2">
             <h1>{entry.data.title}</h1>
+            <p class="text-lg">{entry.data.description}</p>
             <div
-              class="flex flex-col items-center justify-between gap-6 p-2 md:flex-row"
+              class="flex flex-col items-center justify-between gap-6 py-2 md:flex-row"
             >
               <div class="flex gap-2">
                 {entry.data.tags.map((t) => <Pill>{t}</Pill>)}
               </div>
-              <p class="text-2xl">{entry.data.description}</p>
             </div>
           </div>
         </div>
@@ -62,7 +62,7 @@ const { Content } = await entry.render();
 
 <style>
   .content {
-    max-width: 65ch;
+    max-width: 80ch;
     margin-inline: auto;
   }
 
