@@ -1,8 +1,10 @@
 ---
 title: Decode Base64
-publishDate: 2023-02-18 00:00:00
+publishDate: 2023-02-18 03:00:00
 description: |
   Decode and Encode base64 strings
+source: https://github.com/gileadekelvin/decode-base-64
+url: https://decode-base64.vercel.app
 tags:
   - Nextjs
   - create-t3-app

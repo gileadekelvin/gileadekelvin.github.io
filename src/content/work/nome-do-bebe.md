@@ -1,8 +1,10 @@
 ---
 title: Nome do Bebê
-publishDate: 2023-18-02 00:00:00
+publishDate: 2023-02-18 03:00:00
 description: |
   Choose your baby name
+source: https://github.com/gileadekelvin/nome-de-bebe
+url: https://nome-do-bebe.vercel.app
 tags:
   - Nextjs
   - trpc

@@ -1,10 +1,50 @@
 ---
 import Icon from "./Icon.astro";
+import { getCollection } from "astro:content";
+
+const allProjects = await getCollection("work");
+const projects = allProjects.sort(
+  (a, b) => a.data.publishDate.valueOf() - b.data.publishDate.valueOf(),
+);
 ---
 
 <div class="flex max-w-[83rem] flex-col gap-4 py-4">
   <div class="flex flex-col gap-4">
-    <div class="flex flex-col border-l-4 border-gray-400 px-4 py-2">
+    {
+      projects.map((project) => (
+        <div class="flex flex-col gap-1 border-l-4 border-gray-400 px-4 py-2">
+          <div>
+            <a href={project.slug}>
+              <h5 class="text-gray-800 hover:text-gray-500">
+                {project.data.title}
+              </h5>
+            </a>
+            <p>{project.data.subtitle ?? project.data.description}</p>
+          </div>
+          <div class="flex flex-row gap-4 pt-2">
+            <a
+              href={project.data.source}
+              target="_blank"
+              rel="noopener"
+              class="flex flex-row text-gray-800 hover:text-gray-500"
+            >
+              <span class="pr-1">source</span>
+              <Icon icon="github-logo" size="24px" />
+            </a>
+            <a
+              href={project.data.url}
+              target="_blank"
+              rel="noopener"
+              class="flex flex-row text-gray-800 hover:text-gray-500"
+            >
+              <span class="pr-1">View</span>
+              <Icon icon="external" size="24px" />
+            </a>
+          </div>
+        </div>
+      ))
+    }
+    <!-- <div class="flex flex-col gap-1 border-l-4 border-gray-400 px-4 py-2">
       <div>
         <a href="/work/standup-daily"
           ><h5 class="text-gray-800 hover:text-gray-500">Standup Daily</h5></a
@@ -191,5 +231,36 @@ import Icon from "./Icon.astro";
         </a>
       </div>
     </div>
+    <div class="flex flex-col gap-1 border-l-4 border-gray-400 px-4 py-2">
+      <div>
+        <a href="/work/weather-tree"
+          ><h5 class="text-gray-800 hover:text-gray-500">Weather tree</h5></a
+        >
+        <p>
+          A simple application made with the power of Vite. Search weather
+          information for your city.
+        </p>
+      </div>
+      <div class="flex flex-row gap-4 pt-2">
+        <a
+          href="https://github.com/gileadekelvin/weather-tree"
+          target="_blank"
+          rel="noopener"
+          class="flex flex-row text-gray-800 hover:text-gray-500"
+        >
+          <span class="pr-1">source</span>
+          <Icon icon="github-logo" size="24px" />
+        </a>
+        <a
+          href="https://weather-tree.vercel.app/"
+          target="_blank"
+          rel="noopener"
+          class="flex flex-row text-gray-800 hover:text-gray-500"
+        >
+          <span class="pr-1">View</span>
+          <Icon icon="external" size="24px" />
+        </a>
+      </div>
+    </div> -->
   </div>
 </div>

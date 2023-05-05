@@ -1,8 +1,10 @@
 ---
 title: congresso.json
-publishDate: 2023-21-04 00:00:00
+publishDate: 2023-04-21 03:00:00
 description: |
   Visualize government data from Brazil
+source: https://github.com/gileadekelvin/congresso-json
+url: https://congresso-json.vercel.app
 tags:
   - Nextjs
   - React Server Components

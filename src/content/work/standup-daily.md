@@ -1,8 +1,10 @@
 ---
 title: Standup Daily
-publishDate: 2023-02-18 00:00:00
+publishDate: 2023-02-17 03:00:00
 description: |
   An async remote stand-up meeting plataform
+source: https://github.com/gileadekelvin/standup-api
+url: https://standup-daily.vercel.app
 tags:
   - GraphQL
   - Nextjs

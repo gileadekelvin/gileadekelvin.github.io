@@ -1,7 +1,9 @@
 ---
 title: Watch
-publishDate: 2023-27-03 00:00:00
+publishDate: 2023-03-27 03:00:00
 description: Keep tracking the code that you need to review and deploy.
+source: https://github.com/gileadekelvin/watch
+url: https://watch-beta.vercel.app
 tags:
   - Nextjs
   - trpc

@@ -1,7 +1,9 @@
 ---
 title: Timelining
-publishDate: 2023-01-03 00:00:00
+publishDate: 2023-03-01 03:00:00
 description: Bring your stories to life with easy-to-create timelines.
+source: https://github.com/gileadekelvin/timelining
+url: https://timelining.vercel.app
 tags:
   - Nextjs
   - trpc
