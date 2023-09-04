@@ -15,12 +15,14 @@ const skills = [
 ---
 
 <BaseLayout title="About | Gileade Kelvin" description="About Gileade Kelvin">
-  <main class="m-auto flex min-w-[60rem] flex-col px-4 pb-24">
+  <main
+    class="md:m-auto flex md:min-w-[60rem] flex-col px-3 pb-24"
+  >
     <header class="flex flex-col gap-4">
-      <h1 class="text-5xl font-bold text-gray-900">About</h1>
+      <h1 class="text-5xl font-bold text-gray-800">About</h1>
       <p class="text-lg">My background and skills</p>
     </header>
-    <div class="flex min-w-[60rem] flex-col gap-4 py-8">
+    <div class="flex md:min-w-[60rem] flex-col gap-4 py-8">
       <section>
         <h3 class="py-4 text-2xl font-bold">Background</h3>
         <div class="flex flex-col pl-4">
@@ -136,10 +138,10 @@ const skills = [
       </section>
       <section>
         <h3 class="py-4 text-2xl font-bold">Skills</h3>
-        <div class="mt-2 flex flex-row gap-4">
+        <div class="mt-2 flex flex-wrap gap-4">
           {
             skills.map((skill) => (
-              <span class="rounded-full border border-gray-200 px-4 py-3">
+              <span class="rounded-full border border-gray-200 px-4 py-3 w-fit">
                 {skill}
               </span>
             ))

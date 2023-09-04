@@ -2,19 +2,19 @@
 import Icon from "./Icon.astro";
 import { getCollection } from "astro:content";
 
-const allProjects = await getCollection("work");
+const allProjects = await getCollection("projects");
 const projects = allProjects.sort(
   (a, b) => a.data.publishDate.valueOf() - b.data.publishDate.valueOf(),
 );
 ---
 
-<div class="flex min-w-[60rem] flex-col gap-4 py-8">
+<div class="flex md:min-w-[60rem] flex-col gap-4 py-8">
   <div class="flex flex-col gap-4">
     {
       projects.map((project) => (
         <div class="flex flex-col gap-1 border-l-4 border-gray-400 px-4 py-2">
           <div>
-            <a href={`/work/${project.slug}`}>
+            <a href={`/projects/${project.slug}`}>
               <h5 class="text-gray-800 hover:text-gray-500 text-lg font-extrabold">
                 {project.data.title}
               </h5>

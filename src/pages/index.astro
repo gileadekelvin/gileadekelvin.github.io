@@ -1,16 +1,12 @@
 ---
-import { getCollection } from "astro:content";
-
 import BaseLayout from "../layouts/BaseLayout.astro";
-import Projects from "../components/Projects.astro";
-
-const projects = (await getCollection("work"))
-  .sort((a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf())
-  .slice(0, 4);
+import ProjectsList from "../components/ProjectsList.astro";
 ---
 
 <BaseLayout>
-  <div class="m-auto flex min-w-[60rem] flex-col justify-center py-2 pb-16">
+  <div
+    class="m-auto flex md:min-w-[60rem] flex-col justify-center px-3 md:px-0 py-2 pb-16"
+  >
     <header class="flex w-full flex-col gap-2 lg:gap-16">
       <div class="flex flex-col gap-2">
         <h1 class="text-4xl text-gray-800 font-bold">
@@ -26,11 +22,11 @@ const projects = (await getCollection("work"))
     </header>
   </div>
 
-  <main class="m-auto flex max-w-[100rem] flex-col justify-center px-2">
+  <main class="m-auto flex max-w-[100rem] flex-col justify-center px-3">
     <div>
       <p class="text-3xl font-extrabold text-gray-800">Projects</p>
       <p>Take a look below at some of my open source projects</p>
     </div>
-    <Projects />
+    <ProjectsList />
   </main>
 </BaseLayout>
