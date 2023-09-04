@@ -24,7 +24,12 @@ import ProjectsList from "../components/ProjectsList.astro";
 
   <main class="m-auto flex max-w-[100rem] flex-col justify-center px-3">
     <div>
-      <p class="text-3xl font-extrabold text-gray-800">Projects</p>
+      <p
+        class="text-3xl font-extrabold text-gray-800"
+        transition:name="projects"
+      >
+        Projects
+      </p>
       <p>Take a look below at some of my open source projects</p>
     </div>
     <ProjectsList />
