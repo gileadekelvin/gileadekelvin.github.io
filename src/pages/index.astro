@@ -1,12 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 
-// Layout import — provides basic page elements: <head>, <nav>, <footer> etc.
 import BaseLayout from "../layouts/BaseLayout.astro";
-
-// Component Imports
-import Icon from "../components/Icon.astro";
-import Pill from "../components/Pill.astro";
 import Projects from "../components/Projects.astro";
 
 const projects = (await getCollection("work"))
@@ -15,14 +10,12 @@ const projects = (await getCollection("work"))
 ---
 
 <BaseLayout>
-  <div
-    class="m-auto flex max-w-[83rem] flex-col justify-center p-4 pb-16"
-  >
+  <div class="m-auto flex min-w-[60rem] flex-col justify-center py-2 pb-16">
     <header class="flex w-full flex-col gap-2 lg:gap-16">
       <div class="flex flex-col gap-2">
-        <h1 class="text-4xl text-gray-800">
+        <h1 class="text-4xl text-gray-800 font-bold">
           Hi, my name is <span
-            class="text-text-heading bg-gradient-to-bl from-primary to-primary bg-[length:90%_40%] bg-bottom bg-no-repeat text-center text-4xl font-bold text-gray-800"
+            class="text-heading bg-gradient-to-bl from-primary to-primary bg-[length:90%_40%] bg-bottom bg-no-repeat text-center text-4xl font-bold text-gray-800"
             >Gileade Kelvin</span
           >
         </h1>
@@ -33,10 +26,10 @@ const projects = (await getCollection("work"))
     </header>
   </div>
 
-  <main class="m-auto flex max-w-[83rem] flex-col justify-center px-2">
+  <main class="m-auto flex max-w-[100rem] flex-col justify-center px-2">
     <div>
-      <h3>Recent projects</h3>
-      <p>Take a look below at some of my recent projects</p>
+      <p class="text-3xl font-extrabold text-gray-800">Projects</p>
+      <p>Take a look below at some of my open source projects</p>
     </div>
     <Projects />
   </main>

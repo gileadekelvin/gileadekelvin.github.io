@@ -1,5 +1,5 @@
 ---
-import { CollectionEntry, getCollection } from "astro:content";
+import { type CollectionEntry, getCollection } from "astro:content";
 
 import BaseLayout from "../../layouts/BaseLayout.astro";
 
@@ -46,11 +46,6 @@ const { Content } = await entry.render();
       </header>
       <main class="m-auto w-full max-w-[83rem]">
         <div class="content flex flex-col gap-10">
-          {
-            entry.data.img && (
-              <img src={entry.data.img} alt={entry.data.img_alt || ""} />
-            )
-          }
           <div class="content">
             <Content />
           </div>
